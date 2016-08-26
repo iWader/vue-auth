@@ -14,6 +14,14 @@
     "oauth",
     "token"
   ],
-  "author": "iWader <wade@iwader.co.uk>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iWader/vue-auth.git"
+  },
+  "author": {
+    "name": "Wade Urry",
+    "email": "wade@iwader.co.uk",
+    "url": "https://iwader.co.uk"
+  },
   "license": "MIT"
 }
