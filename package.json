@@ -1,0 +1,19 @@
+{
+  "name": "vue-auth",
+  "version": "0.1.0",
+  "description": "Vue plugin for easily managing auth state",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "auth",
+    "authentication",
+    "jwt",
+    "oauth",
+    "token"
+  ],
+  "author": "iWader <wade@iwader.co.uk>",
+  "license": "MIT"
+}
