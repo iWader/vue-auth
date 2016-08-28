@@ -23,5 +23,8 @@
     "email": "wade@iwader.co.uk",
     "url": "https://iwader.co.uk"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "Base64": "^1.0.0"
+  }
 }

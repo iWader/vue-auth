@@ -1,6 +1,4 @@
-function defaultCallback(token) {
-    return token !== null;
-}
+import JWT from './util/jwt'
 
 function plugin(Vue, options) {
 
@@ -13,7 +11,6 @@ function plugin(Vue, options) {
     Vue.auth = {
 
         storageKey: options.storageKey || '_auth.token',
-        callback: options.authCallback || defaultCallback,
         redirectType: options.redirectType || 'router',
         authPath: options.authPath || '/login',
 
@@ -37,7 +34,7 @@ function plugin(Vue, options) {
 
         isAuthenticated() {
 
-            return this.callback(this.getToken())
+            return ! JWT.isExpired(this.getToken());
 
         },
 
