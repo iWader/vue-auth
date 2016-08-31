@@ -10,19 +10,26 @@ function plugin(Vue, options) {
 
     Vue.auth = {
 
-        storageKey: options.storageKey || '_auth.token',
+        storagePrefix: options.storagePrefix || '_auth.',
         redirectType: options.redirectType || 'router',
         authPath: options.authPath || '/login',
+        userData: undefined,
+
+        getStorageKey(part) {
+
+            return this.storagePrefix + part
+
+        },
 
         setToken(token) {
 
-            return localStorage.setItem(this.storageKey, token)
+            return localStorage.setItem(this.getStorageKey('token'), token)
 
         },
 
         getToken() {
 
-            return localStorage.getItem(this.storageKey)
+            return localStorage.getItem(this.getStorageKey('token'))
 
         },
 
