@@ -21,6 +21,20 @@ function plugin(Vue, options) {
 
         },
 
+        setUserData(data) {
+
+            this.userData = data;
+
+            return localStorage.setItem(this.getStorageKey('user'), JSON.stringify(data));
+
+        },
+
+        getUserData() {
+
+            return JSON.parse(localStorage.getItem(this.getStorageKey('user')))
+
+        },
+
         setToken(token) {
 
             return localStorage.setItem(this.getStorageKey('token'), token)
