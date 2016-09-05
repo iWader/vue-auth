@@ -1,5 +1,7 @@
 # vue-auth
 
+[![CircleCI](https://img.shields.io/circleci/project/iWader/vue-auth/master.svg)](https://circleci.com/gh/iWader/vue-auth)[![NPM](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/vue-auth)
+
 Vue plugin for easily managing your app's auth state
 
     This is a work in progress and the API may change without notice
