@@ -1,6 +1,6 @@
 {
   "name": "vue-auth",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Vue plugin for easily managing auth state",
   "main": "index.js",
   "scripts": {
