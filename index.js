@@ -47,6 +47,12 @@ function plugin(Vue, options) {
 
         },
 
+        removeToken() {
+
+            return localStorage.removeItem(this.getStorageKey('token'))
+
+        },
+
         hasToken() {
 
             return this.getToken() !== null
