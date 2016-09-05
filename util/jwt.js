@@ -28,7 +28,11 @@ export default {
 
         if (typeof decoded.exp === 'undefined') return null;
 
-        return (new Date(0)).setUTCSeconds(decoded.exp);
+        var deadline = new Date(0);
+
+        deadline.setUTCSeconds(decoded.exp);
+
+        return deadline;
 
     },
 
@@ -40,7 +44,7 @@ export default {
 
         const now = new Date();
 
-        return ! deadline.valueOf() > now.valueOf();
+        return deadline.valueOf() <= now.valueOf();
 
     }
 
