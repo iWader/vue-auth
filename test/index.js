@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import VueAuth from '../index'
-import JWT from '../util/jwt'
+import VueAuth from '../src/index'
+import JWT from '../src/util/jwt'
 
 Vue.use(VueAuth);
 
