@@ -5,6 +5,8 @@ process.env.BABEL_ENV = 'production'
 var fs = require('fs'),
     rollup = require('rollup'),
     babel = require('rollup-plugin-babel'),
+    nodeResolve = require('rollup-plugin-node-resolve'),
+    commonjs = require('rollup-plugin-commonjs'),
     uglify = require('uglify-js'),
     version = process.env.VERSION || require('./package.json').version
 
@@ -17,28 +19,40 @@ var banner =
 
 rollup.rollup({
   entry: 'src/index.js',
-  plugins: [babel()]
+  plugins: [
+      nodeResolve(),
+      commonjs({
+        include: 'node_modules/**'
+      }),
+      babel()
+  ]
 })
 
   .then(function(bundle) {
     return write('dist/vue-auth.js', bundle.generate({
       format: 'umd',
       banner: banner,
-      moduleName: 'vue-auth'
+      moduleName: 'VueAuth'
     }).code)
   })
 
   .then(function() {
     return rollup.rollup({
       entry: 'src/index.js',
-      plugins: [babel()]
+      plugins: [
+        nodeResolve(),
+        commonjs({
+          include: 'node_modules/**'
+        }),
+        babel()
+      ]
     })
   })
 
   .then(function(bundle) {
     var code = bundle.generate({
       format: 'umd',
-      moduleName: 'vue-auth'
+      moduleName: 'VueAuth'
     }).code
 
     var minified = banner + '\n' + uglify.minify(code, {
