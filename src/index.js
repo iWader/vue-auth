@@ -82,7 +82,7 @@ function plugin(Vue, options) {
                             window.location.href = instance.$auth.authPath;
                         }
                         else {
-                            instance.$router.go(instance.$auth.authPath);
+                            instance.$router.push(instance.$auth.authPath);
                         }
                     }
 
