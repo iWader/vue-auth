@@ -1,5 +1,5 @@
 /*!
- * vue-auth v0.4.1
+ * vue-auth v2.0.0-alpha.1
  * (c) 2016 Wade Urry
  * Released under the MIT License.
  */
@@ -181,7 +181,7 @@ function plugin(Vue, options) {
                         if (instance.$auth.redirectType === 'browser') {
                             window.location.href = instance.$auth.authPath;
                         } else {
-                            instance.$router.go(instance.$auth.authPath);
+                            instance.$router.push(instance.$auth.authPath);
                         }
                     }
 
