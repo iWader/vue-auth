@@ -18,10 +18,10 @@ npm install vue-auth --save
 ```
 
 ```javascript
-var Vue = require('vue')
-var VueAuth = require('vue-auth')
+import Vue from 'vue';
+import VueAuth from 'vue-auth';
 
-Vue.use(VueAuth)
+Vue.use(VueAuth);
 ```
 
 ## Usage
@@ -39,8 +39,8 @@ Setting options is done the same as all Vue plugins.
 ```javascript
 Vue.use(VueAuth, {
   storagePrefix: '_prefix.',
-  redirectType: 'browser'
-})
+  redirectType: 'browser',
+});
 ```
 
 ##### Methods
