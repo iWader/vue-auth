@@ -1,5 +1,5 @@
 /*!
- * vue-auth v0.4.1
+ * vue-auth v1.0.0-alpha.1
  * (c) 2016 Wade Urry
  * Released under the MIT License.
  */
