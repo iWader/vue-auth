@@ -34,6 +34,12 @@ function plugin(Vue, options) {
             return JSON.parse(localStorage.getItem(this.getStorageKey('user')))
 
         },
+        
+        removeUserData() {
+
+            return localStorage.removeItem(this.getStorageKey('user'))
+
+        },
 
         setToken(token) {
 
