@@ -61,7 +61,7 @@ function plugin(Vue, options) {
 
         isAuthenticated() {
 
-            return ! JWT.isExpired(this.getToken());
+            return this.hasToken() ? !JWT.isExpired(this.getToken()) : false;
 
         },
 
